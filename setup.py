@@ -1,7 +1,7 @@
 """Set up mystrom2mqtt gateway."""
 import os
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -11,8 +11,8 @@ with open(os.path.join(here, "README.rst"), encoding="utf-8") as readme:
 
 setup(
     name="mystrom2mqtt",
-    version="1.1.3",
-    description="Asynchronous Python API client for interacting with myStrom devices",
+    version="0.0.1",
+    description="Transfer HTTP requests from myStrom devices to MQTT",
     long_description=long_description,
     url="https://github.com/home-assistant-ecosystem/mystrom2mqtt",
     author="Fabian Affolter",
@@ -22,7 +22,8 @@ setup(
     packages=find_packages(),
     zip_safe=True,
     include_package_data=True,
-    entry_points={'console_scripts': [' mystrom2mqtt=mystrom2mqtt.__init__:run']},
+    entry_points={"console_scripts": [" mystrom2mqtt=mystrom2mqtt.__init__:run"]},
+    keywords="iot mystrom mqtt homeassistant",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Console",
