@@ -1,0 +1,5 @@
+[mystrom2mqtt]
+broker = "192.168.0.20"
+port = 1883
+username = "mqtt"
+password = "mqtt"
