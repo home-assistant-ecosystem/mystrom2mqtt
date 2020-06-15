@@ -75,7 +75,7 @@ with the parameters you
    
    [Service]
    Type=simple
-   ExecStart=/srv/homeassistant/bin/hass -c "/path/to/config.toml"
+   ExecStart=/usr/bin/mystrom2mqtt -c "/path/to/config.toml"
    
    [Install]
    WantedBy=multi-user.target
