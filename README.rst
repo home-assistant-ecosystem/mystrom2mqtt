@@ -22,7 +22,7 @@ Requirements
 
 You need to have `Python <https://www.python.org>`_ installed.
 
-- `myStrom <https://mystrom.ch>`_ button (button or button+)
+- `myStrom <https://mystrom.ch>`_ button (button or button+, could work with the Motion sensor too)
 - A MQTT broker
 - Network connection
 - Devices connected to your network
