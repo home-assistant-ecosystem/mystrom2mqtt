@@ -56,12 +56,12 @@ A configuration file is needed. The format is TOML and the default name ``config
    username = "mqtt"
    password = "mqtt"
 
-To start ```mystrom2mqtt`` specify the path with ``-c, --config`` to the configuration
+To start ```mystrom2mqtt`` specify the path with ``--config`` to the configuration
 file:
 
 .. code:: bash
 
-   mystrom2mqtt -c path/to/config.toml
+   mystrom2mqtt --config path/to/config.toml
 
 
 To autostart ``mystrom2mqtt`` create a systemd unit file named ``/etc/systemd/system/mystrom2mqtt.service``
@@ -75,7 +75,7 @@ with the parameters you
    
    [Service]
    Type=simple
-   ExecStart=/usr/bin/mystrom2mqtt -c "/path/to/config.toml"
+   ExecStart=/usr/bin/mystrom2mqtt --config "/path/to/config.toml"
    
    [Install]
    WantedBy=multi-user.target
