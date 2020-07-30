@@ -27,8 +27,11 @@ You need to have `Python <https://www.python.org>`_ installed.
 - Network connection
 - Devices connected to your network
 
-Installation
-------------
+Non-Docker deployment
+---------------------
+
+Installation 
+~~~~~~~~~~~~
 
 The package is available in the `Python Package Index <https://pypi.python.org/>`_ .
 
@@ -37,7 +40,7 @@ The package is available in the `Python Package Index <https://pypi.python.org/>
     $ pip3 install mystrom2mqtt
 
 Usage
------
+~~~~~
 
 Set the target of the button. The port which is used by ``mystrom2mqtt`` is 8321.
 
@@ -79,6 +82,47 @@ with the parameters you
    
    [Install]
    WantedBy=multi-user.target
+
+Docker deployment
+-----------------
+
+Installation
+~~~~~~~~~~~~
+
+Create the docker image either with docker 
+
+.. code:: bash
+
+    $ docker build -t mystrom2mqtt:1 .
+
+Usage
+~~~~~
+
+The configuration is needed either using docker environments or config file. The
+following variables are processed:
+
+
++--------------+---------------------------------------+
+| Variable     |                                       |
++--------------+---------------------------------------+
+| ``BROKER``   | The address or name of the broker.    |
++--------------+---------------------------------------+
+| ``PORT``     | The port or the broker. Default 1883. |
++--------------+---------------------------------------+
+| ``USERNAME`` | The username. Default no user.        |
++--------------+---------------------------------------+
+| ``PASSWORD`` | The password. Default no password.    |
++--------------+---------------------------------------+
+
+Example:
+
+.. code:: bash
+    $ docker run -e BROKER=192.168.1.1 -p 8321:8321 mystrom2mqtt:1
+
+With config file instead of variables:
+
+.. code:: bash
+    $ docker run -v ./config.toml:/app/config.toml -p 8321:8321 mystrom2mqtt:1
 
 
 License
