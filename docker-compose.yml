@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  mystrom2mqtt:
+    build: .
+    image: mystrom2mqtt:1
+    ports:
+      - 8321:8321
+    environment:
+      BROKER: 127.0.0.1

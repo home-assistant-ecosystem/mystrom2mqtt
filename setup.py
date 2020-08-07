@@ -18,7 +18,7 @@ setup(
     author="Fabian Affolter",
     author_email="fabian@affolter-engineering.ch",
     license="ASL 2.0",
-    install_requires=["fastapi", "uvicorn", "toml", "netaddr", "asyncio_mqtt"],
+    install_requires=["python-multipart", "fastapi", "uvicorn", "toml", "netaddr", "asyncio_mqtt"],
     packages=find_packages(),
     zip_safe=True,
     include_package_data=True,
