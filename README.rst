@@ -117,11 +117,14 @@ following variables are processed:
 Example:
 
 .. code:: bash
+
     $ docker run -e BROKER=192.168.1.1 -p 8321:8321 mystrom2mqtt:1
+
 
 With config file instead of variables:
 
 .. code:: bash
+
     $ docker run -v ./config.toml:/app/config.toml -p 8321:8321 mystrom2mqtt:2
 
 
