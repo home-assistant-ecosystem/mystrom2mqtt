@@ -159,10 +159,15 @@ async def root(
         sensor_config_data = {
             "name": f"myStrom Wifi Button {sensor_type}",
             "state_topic": topic_sensor,
-            "device_class": SENSOR_TYPES[sensor_type],
             "unique_id": f"{mac}_{sensor_type}_mystrom2mqtt",
             "device": device_data,
         }
+        if SENSOR_TYPES[sensor_type]:
+            sensor_config_data.update(
+                {
+                    "device_class": SENSOR_TYPES[sensor_type],
+                }
+            )
         logger.debug(sensor_config_data)
         messages.append(
             {
