@@ -93,7 +93,7 @@ Create the docker image either with docker
 
 .. code:: bash
 
-    $ docker build -t mystrom2mqtt:1 .
+    $ docker build -t mystrom2mqtt:2 .
 
 Usage
 ~~~~~
@@ -118,14 +118,14 @@ Example:
 
 .. code:: bash
 
-    $ docker run -e BROKER=192.168.1.1 -p 8321:8321 mystrom2mqtt:1
+    $ docker run -e BROKER=192.168.1.1 -p 8321:8321 mystrom2mqtt:2
 
 
 With config file instead of variables:
 
 .. code:: bash
 
-    $ docker run -v ./config.toml:/app/config.toml -p 8321:8321 mystrom2mqtt:1
+    $ docker run -v ./config.toml:/app/config.toml -p 8321:8321 mystrom2mqtt:2
 
 
 License
