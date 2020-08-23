@@ -3,7 +3,7 @@ version: '2'
 services:
   mystrom2mqtt:
     build: .
-    image: mystrom2mqtt:1
+    image: mystrom2mqtt:2
     ports:
       - 8321:8321
     environment:
